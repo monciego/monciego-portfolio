@@ -17,9 +17,7 @@ const ProjectBody = ({ content }: Props) => {
         dangerouslySetInnerHTML={{ __html: content }}
       />
       <LinkContainer>
-        <Link href="/">
-          <a>← View more projects</a>
-        </Link>
+        <Link href="/">← View more projects</Link>
       </LinkContainer>
     </ContentContainer>
   );

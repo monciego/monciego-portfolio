@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Logo from 'public/images/logo.svg';
 import React, { useState } from 'react';
 import {
   NavigationLink,
@@ -12,6 +11,7 @@ import {
   StyledNavbar,
 } from '../styles/Navbar.styled';
 import { AnimatedBurger } from './animated-burger';
+import Logo from '/public/images/logo.svg';
 
 export interface INavbarProps {}
 
@@ -21,9 +21,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
   return (
     <StyledNavbar>
       <Link href="/" passHref>
-        <a>
-          <Logo style={{ cursor: 'pointer' }} />
-        </a>
+        <Logo style={{ cursor: 'pointer' }} />
       </Link>
       <AnimatedBurger isOpen={open} setOpen={setOpen} />
       <NavigationOverlay isOpen={open}>
